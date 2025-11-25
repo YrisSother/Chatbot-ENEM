@@ -24,7 +24,16 @@ form.addEventListener('submit', (e) => {
  
     console.log(email.value);
     console.log(senha.value);
-    textform.textContent = 'Dados enviados com sucesso!';
+
+    let emailCorreto = "yrisgabrielle87@gmail.com";
+    let senhaCorreta = "yris0412"
+    
+    if (email.value == emailCorreto && senha.value == senhaCorreta) {
+        window.location.href = "home.html";
+    }else {
+        textform.textContent = "Email e/ou senha incorretos!";
+        return;
+    }
 });
 
 email.addEventListener('keyup', () => {
